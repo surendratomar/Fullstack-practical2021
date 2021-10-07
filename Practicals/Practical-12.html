@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 12</title>
+    <script src="https://use.fontawesome.com/221de87d0a.js"></script>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        table{
+            border: 3px solid rgb(83, 83, 105);
+            border-bottom-left-radius: 9px;
+            border-bottom-right-radius: 9px; 
+            padding: 12px;
+            border-collapse: collapse;
+            width: 95%;
+            margin: 33px auto;
+        }
+        caption{
+            padding: 12px 0;
+            background-color: #0c3b50;
+            color: white;
+            border-top-left-radius: 9px;
+            border-top-right-radius: 9px;
+        }
+        th{
+            padding: 12px 18px;
+        }
+        tr{
+            text-align: left;
+            border-bottom: 1px solid rgba(94, 90, 90, 0.295);  
+        }
+        .mn{
+            border-bottom: 3px solid rgba(94, 90, 90, 0.295);
+        }
+        td{
+           padding: 12px;
+
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+        #right,#delete{
+            color: grey;
+            font-size: 20px;
+        }
+        #right{
+            margin-right: 6px;
+        }
+        #right:hover,#delete:hover{
+            color: black;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <table >
+        <caption>FullStack Live Practical Book</caption>
+        <tr class="mn">
+            <th>#</th>
+            <th>Practical Name</th>
+            <th>Link</th>
+            <th>Status</th>
+            <th>Tools</th>
+        </tr>
+        <tr>
+            <td>1
+                <input type="checkbox" name="" id="chk" value="true" style="visibility: hidden;">
+                <input type="checkbox" name="" id="del" value="true" style="visibility: hidden;">
+            </td>
+
+            <td>
+            Create Your First Web page using: 1. HTML Editor 2.
+              Online Sandbox Environment
+            </td>
+
+            <td><a href="./Practical1.html" target="_blank">Practical 1</a></td>
+
+            <td> 
+                <p id="ch"  style="display: none;color: green;">Checked</p>
+                <p id="unch" style="color: red;display: none;">Unchecked</p>
+                <p id="too">Select any tool</p>
+
+            </td>
+            <td>
+                <label class="check-btn" for="chk" onclick="checkMe(document.getElementById('ch'),document.getElementById('unch'),document.getElementById('too'),document.getElementById('chk'))"> 
+                    <i class="fa fa-pencil" id="right"  title="Edit"></i>
+                </label>
+                    <label class="del-btn" for="del" onclick="checkMe2(document.getElementById('ch'),document.getElementById('unch'),document.getElementById('too'),document.getElementById('del'))">
+                        <i class="fa fa-trash" id="delete"  title="Delete"></i>
+                    </label>
+            </td>
+          </tr>
+          <tr>
+            <td>2
+                <input type="checkbox" name="" id="chk2" value="true" style="visibility: hidden;">
+                <input type="checkbox" name="" id="del2" value="true" style="visibility: hidden;">
+            </td>
+            <td>
+            Create a web page showing output as Html Structure using
+            character Entities and span Tag.
+        </td>
+        <td><a href="./Practical2.html" target="_blank">Practical 2</a></td>
+            <td>
+                <p id="ch2"  style="display: none;color: green;">Checked</p>
+                <p id="unch2" style="color: red;display: none;">Unchecked</p>
+                <p id="too2">Select any tool</p>
+            </td>
+            <td>
+                <label  for="chk2" onclick="checkMe(document.getElementById('ch2'),document.getElementById('unch2'),document.getElementById('too2'),document.getElementById('chk2'))"> 
+                    <i class="fa fa-pencil" id="right"   title="Edit"></i>
+                </label>
+                    <label  for="del2" onclick="checkMe2(document.getElementById('ch2'),document.getElementById('unch2'),document.getElementById('too2'),document.getElementById('del2'))">
+                        <i class="fa fa-trash" id="delete" title="Delete"></i>
+                    </label>
+            </td>
+          </tr>
+          <tr>
+            <td>3
+                <input type="checkbox" name="" id="chk3" value="true" style="visibility: hidden;">
+                <input type="checkbox" name="" id="del3" value="true" style="visibility: hidden;">
+            </td>
+            <td>
+            Live your First Web-Page on Git-Hub
+            </td>
+            <td><a href="./Practical3.html" target="_blank">Practical 3</a></td>
+            <td>
+                <p id="ch3"  style="display: none;color: green;">Checked</p>
+                <p id="unch3" style="color: red;display: none;">Unchecked</p>
+                <p id="too3">Select any tool</p>
+            </td>
+            <td>
+                  <label  for="chk3" onclick="checkMe(document.getElementById('ch3'),document.getElementById('unch3'),document.getElementById('too3'),document.getElementById('chk3'))"> 
+                    <i class="fa fa-pencil" id="right"   title="Edit"></i>
+                </label>
+                    <label  for="del3" onclick="checkMe2(document.getElementById('ch3'),document.getElementById('unch3'),document.getElementById('too3'),document.getElementById('del3'))">
+                        <i class="fa fa-trash" id="delete" title="Delete"></i>
+                    </label>
+            </td>
+          </tr>
+          <tr>
+            <td>4
+                <input type="checkbox" name="" id="chk4" value="true" style="visibility: hidden;">
+                <input type="checkbox" name="" id="del4" value="true" style="visibility: hidden;">
+            </td>
+            <td>
+             Create a website having list of all practical and their individual practical Page links .
+            </td>
+            <td><a href="./Practical4.html" target="_blank">Practical 4</a></td>
+            <td>
+                 <p id="ch4"  style="display: none;color: green;">Checked</p>
+                <p id="unch4" style="color: red;display: none;">Unchecked</p>
+                <p id="too4">Select any tool</p>
+            </td>
+            <td>
+                  <label  for="chk4" onclick="checkMe(document.getElementById('ch4'),document.getElementById('unch4'),document.getElementById('too4'),document.getElementById('chk4'))"> 
+                    <i class="fa fa-pencil" id="right"   title="Edit"></i>
+                </label>
+                    <label  for="del4" onclick="checkMe2(document.getElementById('ch4'),document.getElementById('unch4'),document.getElementById('too4'),document.getElementById('del4'))">
+                        <i class="fa fa-trash" id="delete" title="Delete"></i>
+                    </label>
+            </td>
+          </tr>
+          <tr>
+            <td>5
+                <input type="checkbox" name="" id="chk5" value="true" style="visibility: hidden;">
+                <input type="checkbox" name="" id="del5" value="true" style="visibility: hidden;">
+            </td>
+            <td>
+              Create a Web-Page showing the use of Image-Map in the Web Application. 
+            </td>
+            <td><a href="./Practical5.html" target="_blank">Practical 5</a></td>
+            <td>
+                 <p id="ch5"  style="display: none;color: green;">Checked</p>
+                <p id="unch5" style="color: red;display: none;">Unchecked</p>
+                <p id="too5">Select any tool</p>
+            </td>
+            <td>
+                  <label  for="chk5" onclick="checkMe(document.getElementById('ch5'),document.getElementById('unch5'),document.getElementById('too5'),document.getElementById('chk5'))"> 
+                    <i class="fa fa-pencil" id="right"   title="Edit"></i>
+                </label>
+                    <label  for="del5" onclick="checkMe2(document.getElementById('ch5'),document.getElementById('unch5'),document.getElementById('too5'),document.getElementById('del5'))">
+                        <i class="fa fa-trash" id="delete" title="Delete"></i>
+                    </label>
+            </td>
+          </tr>
+          <tr>
+            <td>6
+                <input type="checkbox" name="" id="chk6" value="true" style="visibility: hidden;">
+                <input type="checkbox" name="" id="del6" value="true" style="visibility: hidden;">
+            </td>
+            <td>
+            Create a Card Layout using CSS layout properties. 
+            </td>
+            <td><a href="./Practical6.html" target="_blank">Practical 6</a></td>
+            <td>
+                 <p id="ch6"  style="display: none;color: green;">Checked</p>
+                <p id="unch6" style="color: red;display: none;">Unchecked</p>
+                <p id="too6">Select any tool</p>
+            </td>
+            <td>
+                  <label  for="chk6" onclick="checkMe(document.getElementById('ch6'),document.getElementById('unch6'),document.getElementById('too6'),document.getElementById('chk6'))"> 
+                    <i class="fa fa-pencil" id="right"   title="Edit"></i>
+                </label>
+                    <label  for="del6" onclick="checkMe2(document.getElementById('ch6'),document.getElementById('unch6'),document.getElementById('too6'),document.getElementById('del6'))">
+                        <i class="fa fa-trash" id="delete" title="Delete"></i>
+                    </label>
+            </td>
+          </tr>
+          <tr>
+            <td>7
+                <input type="checkbox" name="" id="chk7" value="true" style="visibility: hidden;">
+                <input type="checkbox" name="" id="del7" value="true" style="visibility: hidden;">
+            </td>
+            <td>
+            Create a Web Page Layout using div tags.
+            </td>
+            <td><a href="./Practical7.html" target="_blank">Practical 7</a></td>
+            <td>
+                 <p id="ch7"  style="display: none;color: green;">Checked</p>
+                <p id="unch7" style="color: red;display: none;">Unchecked</p>
+                <p id="too7">Select any tool</p></td>
+            <td>
+                  <label  for="chk7" onclick="checkMe(document.getElementById('ch7'),document.getElementById('unch7'),document.getElementById('too7'),document.getElementById('chk7'))"> 
+                    <i class="fa fa-pencil" id="right"   title="Edit"></i>
+                </label>
+                    <label  for="del7" onclick="checkMe2(document.getElementById('ch7'),document.getElementById('unch7'),document.getElementById('too7'),document.getElementById('del7'))">
+                        <i class="fa fa-trash" id="delete" title="Delete"></i>
+                    </label></td>
+          </tr>
+          <tr>
+            <td>8
+                <input type="checkbox" name="" id="chk8" value="true" style="visibility: hidden;">
+                <input type="checkbox" name="" id="del8" value="true" style="visibility: hidden;">
+            </td>
+            <td>
+            Create a Web Page having Fixed Navigation Bar with the given content.
+            </td>
+            <td><a href="./Practical8.html" target="_blank">Practical 8</a></td>
+            <td>
+                 <p id="ch8"  style="display: none;color: green;">Checked</p>
+                <p id="unch8" style="color: red;display: none;">Unchecked</p>
+                <p id="too8">Select any tool</p></td>
+            <td>
+                  <label  for="chk8" onclick="checkMe(document.getElementById('ch8'),document.getElementById('unch8'),document.getElementById('too8'),document.getElementById('chk8'))"> 
+                    <i class="fa fa-pencil" id="right"   title="Edit"></i>
+                </label>
+                    <label  for="del8" onclick="checkMe2(document.getElementById('ch8'),document.getElementById('unch8'),document.getElementById('too8'),document.getElementById('del8'))">
+                        <i class="fa fa-trash" id="delete" title="Delete"></i>
+                    </label></td>
+          </tr>
+          <tr>
+            <td>9
+                <input type="checkbox" name="" id="chk9" value="true" style="visibility: hidden;">
+                <input type="checkbox" name="" id="del9" value="true" style="visibility: hidden;">
+            </td>
+            <td>
+            Create a Responsive Web Layout with Responsive Navigation Bar.
+    
+            </td>
+            <td><a href="./Practical9.html" target="_blank">Practical 9</a></td>
+            <td>
+                 <p id="ch9"  style="display: none;color: green;">Checked</p>
+                <p id="unch9" style="color: red;display: none;">Unchecked</p>
+                <p id="too9">Select any tool</p>
+            </td>
+            <td>
+                  <label  for="chk9" onclick="checkMe(document.getElementById('ch9'),document.getElementById('unch9'),document.getElementById('too9'),document.getElementById('chk9'))"> 
+                    <i class="fa fa-pencil" id="right"   title="Edit"></i>
+                </label>
+                    <label  for="del9" onclick="checkMe2(document.getElementById('ch9'),document.getElementById('unch9'),document.getElementById('too9'),document.getElementById('del9'))">
+                        <i class="fa fa-trash" id="delete" title="Delete"></i>
+                    </label>
+            </td>
+          </tr>
+          <tr>
+            <td>10
+                <input type="checkbox" name="" id="chk10" value="true" style="visibility: hidden;">
+                <input type="checkbox" name="" id="del10" value="true" style="visibility: hidden;">
+            </td>
+            <td>
+            Create a Responsive Side-Bar Navigation Menu.
+    
+            </td>
+            <td><a href="./Practical10.html" target="_blank">Practical 10</a></td>
+            <td>
+                 <p id="ch10"  style="display: none;color: green;">Checked</p>
+                <p id="unch10" style="color: red;display: none;">Unchecked</p>
+                <p id="too10">Select any tool</p>
+            </td>
+            <td>
+                  <label  for="chk10" onclick="checkMe(document.getElementById('ch10'),document.getElementById('unch10'),document.getElementById('too10'),document.getElementById('chk10'))"> 
+                    <i class="fa fa-pencil" id="right"   title="Edit"></i>
+                </label>
+                    <label  for="del10" onclick="checkMe2(document.getElementById('ch10'),document.getElementById('unch10'),document.getElementById('too10'),document.getElementById('del10'))">
+                        <i class="fa fa-trash" id="delete" title="Delete"></i>
+                    </label>
+            </td>
+          </tr>
+          <tr>
+            <td>11
+                <input type="checkbox" name="" id="chk11" value="true" style="visibility: hidden;"> 
+                <input type="checkbox" name="" id="del11" value="true" style="visibility: hidden;"> 
+            </td>
+            <td>
+            Create a Responsive Side-Bar Navigation Menu.
+    
+            </td>
+            <td><a href="./Practical11.html" target="_blank">Practical 11</a></td>
+            <td>
+                 <p id="ch11"  style="display: none;color: green;">Checked</p>
+                <p id="unch11" style="color: red;display: none;">Unchecked</p>
+                <p id="too11">Select any tool</p>
+            </td>
+            <td>
+                  <label  for="chk11" onclick="checkMe(document.getElementById('ch11'),document.getElementById('unch11'),document.getElementById('too11'),document.getElementById('chk11'))"> 
+                    <i class="fa fa-pencil" id="right"   title="Edit"></i>
+                </label>
+                    <label  for="del11" onclick="checkMe2(document.getElementById('ch11'),document.getElementById('unch11'),document.getElementById('too11'),document.getElementById('del11'))">
+                        <i class="fa fa-trash" id="delete" title="Delete"></i>
+                    </label>
+            </td>
+          </tr>
+          <tr>
+            <td>12
+                <input type="checkbox" name="" id="chk12" value="true" style="visibility: hidden;"> 
+                <input type="checkbox" name="" id="del12" value="true" style="visibility: hidden;"> 
+            </td>
+            <td>
+                Create a Table that represent Live Practical Book Records .
+    
+            </td>
+            <td><a href="./Practical11.html" target="_blank">Practical 12</a></td>
+            <td>
+                 <p id="ch12"  style="display: none;color: green;">Checked</p>
+                <p id="unch12" style="color: red;display: none;">Unchecked</p>
+                <p id="too12">Select any tool</p>
+            </td>
+            <td>
+                  <label  for="chk12" onclick="checkMe(document.getElementById('ch12'),document.getElementById('unch12'),document.getElementById('too12'),document.getElementById('chk12'))"> 
+                    <i class="fa fa-pencil" id="right"   title="Edit"></i>
+                </label>
+                    <label  for="del12" onclick="checkMe2(document.getElementById('ch12'),document.getElementById('unch12'),document.getElementById('too12'),document.getElementById('del12'))">
+                        <i class="fa fa-trash" id="delete" title="Delete"></i>
+                    </label>
+            </td>
+          </tr>
+    </table>
+          <script>
+              function checkMe(c,dd,tt,ckk){
+                  if(ckk.value=="true"){
+                      tt.style.display="none"
+                      dd.style.display="none";
+                      c.style.display="block";
+                      
+                  }
+              }
+              function checkMe2(c,dd,tt,ck1){
+                if(ck1.value=="true"){
+                    tt.style.display="none"
+                      c.style.display="none";
+                      dd.style.display="block";
+                  }
+              }
+          </script>
+
+</body>
+</html>
