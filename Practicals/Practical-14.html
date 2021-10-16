@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical-14</title>
+    <style>
+      body {
+        background-color: grey;
+        text-align: center;
+      }
+      button {
+        padding: 12px 20px;
+        font-size: 27px;
+        background-color: yellow;
+      }
+      p {
+        font-size: 34px;
+        font-weight: bold;
+        color: yellow;
+        margin: 0 42px 0 42px;
+        display: inline-block;
+    
+      }
+      h1{
+          font-size: 54px;
+          line-height: 149px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <button type="button" id="neg">-</button>
+    <p id="para">0</p>
+    <button type="button" id="plus">+</button>
+
+    <script>
+        var b = document.getElementById("neg");
+        var b1 = document.getElementById("plus"),
+        count = 0;
+        if(count==0){
+            b.style.background="transparent";
+        }
+
+        b.onclick = function () {
+            if (count > 0) {
+            count -= 1;
+          }
+          document.getElementById('para').innerHTML= count;
+          if(count==0){
+            b.style.background="transparent";
+        }
+        };
+        b1.onclick = function () {
+         
+            count += 1;
+          
+          document.getElementById('para').innerHTML =count;
+          b.style.background="yellow";
+        };
+    </script>
+  </body>
+</html>
